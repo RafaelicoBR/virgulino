@@ -1,5 +1,21 @@
 #!/usr/bin/ruby
 
+def splash()
+    puts"****************************************************"
+    puts"*         __                    __ __               *"
+    puts"* .--.--.|__|.----.-----.--.--.|  |__|.-----.-----. *"
+    puts"* |  |  ||  ||   _|  _  |  |  ||  |  ||     |  _  | *"
+    puts"*  \\___/ |__||__| |___  |_____||__|__||__|__|_____| *"
+    puts"*                 |_____|                           *"
+    puts"*                                                   *"
+    puts"* Virgulino Ver. 0.1                                *"
+    puts"* coded by n3k00n3                                  *"
+    puts"* LampiaoSEC - Security Research Group              *"
+    puts"* #lampiaosec at freenode                           *\n"
+    puts"*****************************************************\n"
+end
+splash()
+
 puts "What do you want?"
 puts "[1 - encrypter]"
 puts "[2 - decrypter]"
