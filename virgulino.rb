@@ -26,7 +26,7 @@ puts "[2 - to decrypt]".green
 answer = gets.chomp
 
 if answer == "1"
-    puts "write whatever you want to encrypt and press enter."
+    puts "Write whatever text you want to encrypt and press enter."
     $text = gets.chomp
     $text2= ""
     
@@ -38,19 +38,19 @@ if answer == "1"
     f = File.new("virgulino", "w") #make file with stego
     f.write($text2)
     f.close
-    puts "your file is done!"
+    puts "Your file is done! It`s name is virgulino."
 elsif answer == "2"
     exist=false
     while exist != true
-    puts "Enter the filename:"
+    puts "Enter the encrypted filename:"
     $file= gets.chomp
     if File.exist?("#{$file}")
         exist=true
         stegofile = File.read("#{$file}")
 
         #convert spaces/tabs to bin
-	    stegofile.gsub!(/[\t ]/, "\t" => "1", " " => "0")
-        puts "How do you want to name the output file?"
+	    stegofile.gsub!(/[\t]/, "\t" => "1", " " => "0")
+        puts "What should be the output filename?"
         name_file = gets.chomp
 	f = File.new("#{name_file}", "w")
 	f.write(stegofile)
@@ -63,7 +63,7 @@ elsif answer == "2"
             puts "Your file has been created successfuly!"
         end
     else
-	puts "Are you sure that this file exists?"
+	puts name_file + " was not found."
     end
     end
 end
