@@ -1,5 +1,9 @@
 #!/usr/bin/ruby
 
+class String
+def green;          "\033[32m#{self}\033[0m" end
+end
+
 def splash()
     puts"****************************************************"
     puts"*         __                    __ __               *"
@@ -17,27 +21,38 @@ end
 splash()
 
 puts "What do you want?"
-puts "[1 - encrypter]"
-puts "[2 - decrypter]"
+puts "[1 - encrypter]".green
+puts "[2 - decrypter]".green
 answer = gets.chomp
 
 if answer == "1"
     puts "write what you want and press enter."
-    text = gets.chomp
+    $text = gets.chomp
+    $text2= ""
     
-    #Here we need to conver to bin
-    text.gsub!(/[10]/, "1" => "\t", "0" => " ")
-    f = File.new("virgulino", "w")
-    f.write(text)
+    #convert string to bin
+    $text.bytes.each {|x| $text2 += x.to_s(2)}
+    #convert bin to spaces and tabs
+    
+    $text2.gsub!(/[10]/, "1" => "\t", "0" => " ")
+    f = File.new("virgulino", "w") #make file with stego
+    f.write($text2)
     f.close
     puts "your file is done!"
 elsif answer == "2"
+    exist=false
+    while exist != true
     puts "what the file name?"
     $file= gets.chomp
     if File.exist?("#{$file}")
+        exist=true
         stegofile = File.read("#{$file}")
-	stegofile.gsub!(/[\t ]/, "\t" => "1", " " => "0")
-	f = File.new("virgulino", "w")
+
+        #convert spaces/tabs to bin
+	    stegofile.gsub!(/[\t ]/, "\t" => "1", " " => "0")
+        puts "what name do you want to your file?"
+        name_file = gets.chomp
+	f = File.new("#{name_file}", "w")
 	f.write(stegofile)
 	f.close
 	puts "Done! do you want to see?(y/n)"
@@ -49,5 +64,6 @@ elsif answer == "2"
         end
     else
 	puts "This file exist?"
+    end
     end
 end
