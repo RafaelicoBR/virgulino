@@ -20,13 +20,13 @@ def splash()
 end
 splash()
 
-puts "What do you want?"
-puts "[1 - encrypter]".green
-puts "[2 - decrypter]".green
+puts "What do you wanna do?"
+puts "[1 - to encrypt]".green
+puts "[2 - to decrypt]".green
 answer = gets.chomp
 
 if answer == "1"
-    puts "write what you want and press enter."
+    puts "write whatever you want to encrypt and press enter."
     $text = gets.chomp
     $text2= ""
     
@@ -42,7 +42,7 @@ if answer == "1"
 elsif answer == "2"
     exist=false
     while exist != true
-    puts "what the file name?"
+    puts "Enter the filename:"
     $file= gets.chomp
     if File.exist?("#{$file}")
         exist=true
@@ -50,20 +50,20 @@ elsif answer == "2"
 
         #convert spaces/tabs to bin
 	    stegofile.gsub!(/[\t ]/, "\t" => "1", " " => "0")
-        puts "what name do you want to your file?"
+        puts "How do you want to name the output file?"
         name_file = gets.chomp
 	f = File.new("#{name_file}", "w")
 	f.write(stegofile)
 	f.close
-	puts "Done! do you want to see?(y/n)"
+	puts "Done! Do you want to see it? (y/n)"
 	answer_view = gets.chomp
         if answer_view == "y"
             puts stegofile
         else
-            puts "your file has been created!"
+            puts "Your file has been created successfuly!"
         end
     else
-	puts "This file exist?"
+	puts "Are you sure that this file exists?"
     end
     end
 end
