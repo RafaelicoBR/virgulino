@@ -15,7 +15,7 @@ def splash()
     puts"* Virgulino Ver. 0.1                                *".green
     puts"* coded by n3k00n3                                  *".green
     puts"* LampiaoSEC - Security Research Group              *".green
-    puts"* #lampiaosec at freenode                           *\n".green
+    puts"* #lampiaosec at freenode                           *".green
     puts"*****************************************************\n".green
 end
 splash()
