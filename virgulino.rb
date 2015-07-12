@@ -23,17 +23,14 @@ end
 def bin_to_s(str)
     newstr = ""
     counter = 0
-    ascii = ""
-    
     final = ""
+
     str.each_char do |x| 
         newstr += x
         counter += 1
         if counter == 7
-            ascii = newstr.to_i (2)
-            final += ascii.chr
+            final += (newstr.to_i (2)).chr
             counter = 0
-            ascii = ""
             newstr = ""
         end
     end
