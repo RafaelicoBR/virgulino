@@ -79,7 +79,7 @@ def decrypt
         	puts "Done! Do you want to see it? (y/n)".green
         	answer_view = gets.chomp
             if answer_view == "y"
-                puts stegofile.green
+                puts stegofile.green + "\n"
             else
                 puts "Your file has been created successfuly!".green
             end
