@@ -84,15 +84,15 @@ class Virgulino
                     puts "Your file has been created successfuly!".green
                 end
             else
-        	   puts name_file + " was not found.".green
+        	   puts (name_file + " was not found.").green
             end
         end
     end
 
     def menu
         puts "What do you wanna do?".green
-        puts "[1 - to encrypt]".green
-        puts "[2 - to decrypt]".green
+        puts "[e - to encrypt]".green
+        puts "[d - to decrypt]".green
         answer = gets.chomp
         answer
     end
@@ -100,11 +100,14 @@ class Virgulino
 
     def main
         splash()
-        if menu() == "1"
+        todo = menu()
+        if todo == "e"
             encrypt()
-        else 
+        elsif todo == "d"
             decrypt()
-        end 
+        else
+            puts ("Unrecognized option: " + todo).green
+        end
     end
 end
 
