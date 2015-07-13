@@ -12,16 +12,16 @@ class Virgulino
         puts"*         __                    __ __               *".green
         puts"* .--.--.|__|.----.-----.--.--.|  |__|.-----.-----. *".green
         puts"* |  |  ||  ||   _|  _  |  |  ||  |  ||     |  _  | *".green
-        puts"* \\___/ |__||__| |___  |_____||__|__||__|__|_____| *".green
+        puts"*  \\___/ |__||__| |___  |_____||__|__||__|__|_____| *".green
         puts"*                 |_____|                           *".green
         puts"*                                                   *".green
         puts"* Virgulino Ver. 0.1                                *".green
         puts"* coded by:                                         *".green
         puts"*      n3k00n3  -  nekoone (at) riseup(dot)net      *".green
-        puts"*      UserX - user_x(at)riseup(dot_net             *".green
+        puts"*      UserX    -  user_x(at)riseup(dot_net         *".green
         puts"*      Cascudo                                      *".green
         puts"* LampiaoSEC - Security Research Group              *".green
-        puts"* #lampiaosec at freenode                           *\n".green
+        puts"* #lampiaosec at freenode                           *".green
         puts"*****************************************************\n".green
     end
 
