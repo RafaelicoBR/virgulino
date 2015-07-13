@@ -2,6 +2,7 @@
 
 class String
     def green; "\033[32m#{self}\033[0m" end
+    def red;"\033[31m#{self}\033[0m" end
 end
 
 class Virgulino
@@ -60,7 +61,7 @@ class Virgulino
     def decrypt
         exist=false
         while exist != true
-            puts "Enter the encrypted filename:".green
+            puts "Enter the encrypted filename:".red
             $file= gets.chomp
             if File.exist?("#{$file}")
                 exist=true
@@ -71,20 +72,20 @@ class Virgulino
                 stegofile.gsub!(/[ ]/ , "0")
                 stegofile = bin_to_s(stegofile)
 
-                puts "What should be the output filename?".green
+                puts "What should be the output filename?".red
                 name_file = gets.chomp
             	f = File.new("#{name_file}", "w")
             	f.write(stegofile)
             	f.close
-            	puts "Done! Do you want to see it? (y/n)".green
+            	puts "Done! Do you want to see it? (y/n)".red
             	answer_view = gets.chomp
                 if answer_view == "y"
                     puts stegofile.green + "\n"
                 else
-                    puts "Your file has been created successfuly!".green
+                    puts "Your file has been created successfuly!".red
                 end
             else
-        	   puts (name_file + " was not found.").green
+        	   puts (name_file + " was not found.").red
             end
         end
     end
@@ -92,7 +93,7 @@ class Virgulino
     def menu
         puts "What do you wanna do?".green
         puts "[e - to encrypt]".green
-        puts "[d - to decrypt]".green
+        puts "[d - to decrypt]".red
         answer = gets.chomp
         answer
     end
