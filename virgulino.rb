@@ -43,13 +43,22 @@ class Virgulino
         final 
     end
 
-    def encrypt
+    def encrypt()
         puts "Write whatever text you want to encrypt and press enter.".green
         $text = gets.chomp
         $text2= ""
         
         #convert string to bin
-        $text.bytes.each {|x| $text2 += x.to_s(2)}
+    #    $text.bytes.each {|x| $text2 += x.to_s(2)}
+
+        $text.bytes.each do |x| 
+            if (x < 0x40) 
+                $text2 += '0'
+            end
+            $text2 += x.to_s(2)
+        end
+
+
         #convert bin to spaces and tabs
         $text2.gsub!(/[10]/, "1" => "\t", "0" => " ")
         f = File.new("virgulino", "w") #make file with stego
@@ -58,11 +67,12 @@ class Virgulino
         puts "Your file is done! It`s name is virgulino.".green
     end
 
-    def decrypt
+    def decrypt()
         exist=false
         while exist != true
-            puts "Enter the encrypted filename:".red
-            $file= gets.chomp
+           # puts "Enter the encrypted filename:".red
+           # $file= gets.chomp
+           $file = "virgulino"
             if File.exist?("#{$file}")
                 exist=true
                 stegofile = File.read("#{$file}")
@@ -70,8 +80,8 @@ class Virgulino
                 #convert spaces/tabs to bin
         	    stegofile.gsub!(/[\t]/ , "\t" => "1")
                 stegofile.gsub!(/[ ]/ , "0")
+                print "Stegofile: " + stegofile + "\n"
                 stegofile = bin_to_s(stegofile)
-
                 puts "What should be the output filename?".red
                 name_file = gets.chomp
             	f = File.new("#{name_file}", "w")
@@ -90,7 +100,7 @@ class Virgulino
         end
     end
 
-    def menu
+    def menu()
         puts "What do you wanna do?".green
         puts "[e - to encrypt]".green
         puts "[d - to decrypt]".red
@@ -99,7 +109,7 @@ class Virgulino
     end
 
 
-    def main
+    def main()
         splash()
         todo = menu()
         if todo == "e"
