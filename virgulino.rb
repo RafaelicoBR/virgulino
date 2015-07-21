@@ -49,8 +49,6 @@ class Virgulino
         $text2= ""
         
         #convert string to bin
-    #    $text.bytes.each {|x| $text2 += x.to_s(2)}
-
         $text.bytes.each do |x| 
             if (x < 0x40) 
                 $text2 += '0'
@@ -70,9 +68,9 @@ class Virgulino
     def decrypt()
         exist=false
         while exist != true
-           # puts "Enter the encrypted filename:".red
-           # $file= gets.chomp
-           $file = "virgulino"
+           puts "Enter the encrypted filename:".red
+           $file= gets.chomp
+           
             if File.exist?("#{$file}")
                 exist=true
                 stegofile = File.read("#{$file}")
