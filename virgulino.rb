@@ -18,8 +18,8 @@ class Virgulino
         puts"*                                                   *".green
         puts"* Virgulino v0.1                                    *".green
         puts"* coded by:                                         *".green
-        puts"*      n3k00n3  -  nekoone (at) riseup(dot)net      *".green
-        puts"*      UserX    -  user_x(at)riseup(dot_net         *".green
+        puts"*      n3k00n3   -   nekoone (at) riseup(dot)net    *".green
+        puts"*      UserX     -   user_x(at)riseup(dot_net       *".green
         puts"*      Cascudo                                      *".green
         puts"* LampiaoSEC - Security Research Group              *".green
         puts"* #lampiaosec at freenode                           *".green
@@ -126,6 +126,7 @@ class Virgulino
             else
                 puts todo.length < 1 ? "Unrecognized option!" : "\nUnrecognized option: " << todo.red << "!"
                 puts "Try again!\n".red
+                puts "Press enter to continue... "
                 gets.chomp
             end
         end
