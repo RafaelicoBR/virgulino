@@ -22,6 +22,7 @@ class Virgulino
         puts"*      Cascudo                                      *".green
         puts"* LampiaoSEC - Security Research Group              *".green
         puts"* #lampiaosec at freenode                           *".green
+        puts"* https://lampiaosec.github.io                      *".green
         puts"*****************************************************\n".green
     end
 
