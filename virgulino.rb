@@ -124,7 +124,8 @@ class Virgulino
                 puts "\nSee you later!\n".red
                 exit()
             else
-                puts "\nUnrecognized option: " << todo.red
+                #puts "\nUnrecognized option: " << todo.red
+                puts todo.length < 1 ? "Unrecognized option!" : "\nUnrecognized option: " << todo.red << "!"
                 puts "Try again!\n".red
                 gets.chomp
             end
