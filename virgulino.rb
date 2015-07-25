@@ -29,6 +29,37 @@ class Virgulino
         puts"*****************************************************\n".green
     end
 
+    def menu()
+        puts "What do you wanna do?".green
+        puts "[e - to encrypt]".green
+        puts "[d - to decrypt]".green
+        puts "[q - to quit]".green
+        puts "\n"
+        answer = gets.chomp
+        answer
+    end
+
+
+    def main()
+        while true
+            splash()
+            todo = menu()
+            if todo == "e"
+                encrypt()
+            elsif todo == "d"
+                decrypt()
+            elsif todo == "q"
+                puts "\nSee you later!\n".red
+                exit()
+            else
+                puts todo.length < 1 ? "Unrecognized option!" : "\nUnrecognized option: " << todo.red << "!"
+                puts "Try again!\n".red
+                puts "Press enter to continue... "
+                gets.chomp
+            end
+        end
+    end
+
     def bin_to_s(str)
         newstr = ""
         counter = 0
@@ -102,36 +133,6 @@ class Virgulino
         end
     end
 
-    def menu()
-        puts "What do you wanna do?".green
-        puts "[e - to encrypt]".green
-        puts "[d - to decrypt]".green
-        puts "[q - to quit]".green
-        puts "\n"
-        answer = gets.chomp
-        answer
-    end
-
-
-    def main()
-        while true
-            splash()
-            todo = menu()
-            if todo == "e"
-                encrypt()
-            elsif todo == "d"
-                decrypt()
-            elsif todo == "q"
-                puts "\nSee you later!\n".red
-                exit()
-            else
-                puts todo.length < 1 ? "Unrecognized option!" : "\nUnrecognized option: " << todo.red << "!"
-                puts "Try again!\n".red
-                puts "Press enter to continue... "
-                gets.chomp
-            end
-        end
-    end
 end
 
 if __FILE__ == $0
