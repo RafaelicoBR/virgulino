@@ -8,7 +8,7 @@ end
 class Virgulino
 
     def splash()
-        puts "\e[1;1H\e[2J]]"
+        puts "\e[1;1H\e[2J"
         puts"*****************************************************".green
         puts"*         __                    __ __               *".green
         puts"* .--.--.|__|.----.-----.--.--.|  |__|.-----.-----. *".green
