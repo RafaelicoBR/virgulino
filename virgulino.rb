@@ -8,6 +8,7 @@ end
 class Virgulino
 
     def splash()
+        puts "\e[1;1H\e[2J]]"
         puts"*****************************************************".green
         puts"*         __                    __ __               *".green
         puts"* .--.--.|__|.----.-----.--.--.|  |__|.-----.-----. *".green
@@ -103,21 +104,30 @@ class Virgulino
     def menu()
         puts "What do you wanna do?".green
         puts "[e - to encrypt]".green
-        puts "[d - to decrypt]".red
+        puts "[d - to decrypt]".green
+        puts "[q - to quit]".green
+        puts "\n"
         answer = gets.chomp
         answer
     end
 
 
     def main()
-        splash()
-        todo = menu()
-        if todo == "e"
-            encrypt()
-        elsif todo == "d"
-            decrypt()
-        else
-            puts ("Unrecognized option: " + todo).green
+        while true
+            splash()
+            todo = menu()
+            if todo == "e"
+                encrypt()
+            elsif todo == "d"
+                decrypt()
+            elsif todo == "q"
+                puts "\nSee you later!\n".red
+                exit()
+            else
+                puts "\nUnrecognized option: " << todo.red
+                puts "Try again!\n".red
+                gets.chomp
+            end
         end
     end
 end
