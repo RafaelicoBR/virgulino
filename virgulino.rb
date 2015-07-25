@@ -21,6 +21,7 @@ class Virgulino
         puts"*      n3k00n3   -   nekoone (at) riseup(dot)net    *".green
         puts"*      UserX     -   user_x(at)riseup(dot_net       *".green
         puts"*      Cascudo                                      *".green
+        puts"*      gjuniioor -   gjuniioor@protonmail.ch        *".green
         puts"* LampiaoSEC - Security Research Group              *".green
         puts"* #lampiaosec at freenode                           *".green
         puts"* https://lampiaosec.github.io                      *".green
