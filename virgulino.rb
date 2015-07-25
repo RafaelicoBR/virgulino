@@ -15,7 +15,7 @@ class Virgulino
         puts"*  \\___/ |__||__| |___  |_____||__|__||__|__|_____| *".green
         puts"*                 |_____|                           *".green
         puts"*                                                   *".green
-        puts"* Virgulino Ver. 0.1                                *".green
+        puts"* Virgulino v0.1                                    *".green
         puts"* coded by:                                         *".green
         puts"*      n3k00n3  -  nekoone (at) riseup(dot)net      *".green
         puts"*      UserX    -  user_x(at)riseup(dot_net         *".green
@@ -23,6 +23,7 @@ class Virgulino
         puts"* LampiaoSEC - Security Research Group              *".green
         puts"* #lampiaosec at freenode                           *".green
         puts"* https://lampiaosec.github.io                      *".green
+        puts"*                                                   *".green
         puts"*****************************************************\n".green
     end
 
