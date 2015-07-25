@@ -29,6 +29,22 @@ class Virgulino
         puts"*****************************************************\n".green
     end
 
+    def help()
+        one = "    "
+        two = one + one
+
+        splash()
+        puts "Usage: " << __FILE__.green << " [options]".green
+        puts "\n"
+        puts "OPTIONS:".green
+        puts "\n"
+
+        puts one + "-h".green << "," << " --help".green << "," <<" h".green << "," << " help".green
+        puts two + "Show the help message"
+        
+        puts "\n"
+    end
+
     def menu()
         puts "What do you wanna do?".green
         puts "[e - to encrypt]".green
@@ -135,7 +151,10 @@ class Virgulino
 
 end
 
-if __FILE__ == $0
+if ['h','help','-h','--help'].include?(ARGV[0])
+    virgulino = Virgulino.new
+    virgulino.help()
+elsif __FILE__ == $0
     virgulino = Virgulino.new
     virgulino.main()
 end
