@@ -19,7 +19,7 @@ You can see https://lampiaosec.github.io/virgulino to read documentation.
 
 Send a e-mail to lampiaosec at riseup dot net.
 
-Or connect to us IRC channel: #lampiaosec in freenode.
+Or connect to us IRC channel: #lampiaosec at freenode.
 
 Look https://lampiaosec.github.io/contact for all ways.
 
