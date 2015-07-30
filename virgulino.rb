@@ -28,7 +28,7 @@ class Virgulino
         * https://lampiaosec.github.io                      *
         *                                                   *
         *****************************************************
-	"""
+	""".green
     end
 
     def help()
