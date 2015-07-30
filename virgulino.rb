@@ -8,25 +8,27 @@ end
 class Virgulino
 
     def splash()
-        puts "\e[1;1H\e[2J"
-        puts"*****************************************************".green
-        puts"*         __                    __ __               *".green
-        puts"* .--.--.|__|.----.-----.--.--.|  |__|.-----.-----. *".green
-        puts"* |  |  ||  ||   _|  _  |  |  ||  |  ||     |  _  | *".green
-        puts"*  \\___/ |__||__| |___  |_____||__|__||__|__|_____| *".green
-        puts"*                 |_____|                           *".green
-        puts"*                                                   *".green
-        puts"* Virgulino v0.1                                    *".green
-        puts"* coded by:                                         *".green
-        puts"*      n3k00n3   -   nekoone (at) riseup(dot)net    *".green
-        puts"*      UserX     -   user_x(at)riseup(dot_net       *".green
-        puts"*      Cascudo                                      *".green
-        puts"*      gjuniioor -   gjuniioor@protonmail.ch        *".green
-        puts"* LampiaoSEC - Security Research Group              *".green
-        puts"* #lampiaosec at freenode                           *".green
-        puts"* https://lampiaosec.github.io                      *".green
-        puts"*                                                   *".green
-        puts"*****************************************************\n".green
+        puts """
+	\e[1;1H\e[2J
+        *****************************************************
+        *         __                    __ __               *
+        * .--.--.|__|.----.-----.--.--.|  |__|.-----.-----. *
+        * |  |  ||  ||   _|  _  |  |  ||  |  ||     |  _  | *
+        *  \\___/ |__||__| |___  |_____||__|__||__|__|_____| *
+        *                 |_____|                           *
+        *                                                   *
+        * Virgulino v0.1                                    *
+        * coded by:                                         *
+        *      n3k00n3   -   nekoone (at) riseup(dot)net    *
+        *      UserX     -   user_x(at)riseup(dot_net       *
+        *      Cascudo                                      *
+        *      gjuniioor -   gjuniioor@protonmail.ch        *
+        * LampiaoSEC - Security Research Group              *
+        * #lampiaosec at freenode                           *
+        * https://lampiaosec.github.io                      *
+        *                                                   *
+        *****************************************************
+	"""
     end
 
     def help()
